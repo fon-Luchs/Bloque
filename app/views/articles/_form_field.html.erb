@@ -1,0 +1,39 @@
+<%=	 form_with model: @article, local: true do |form| %>
+
+  <% if @article.errors.any? %>
+    <div id="error_explanation">
+      <h2>
+        <%= pluralize(@article.errors.count, "error") %> prohibited
+        this article from being saved:
+      </h2>
+      <ul>
+        <% @article.errors.full_messages.each do |msg| %>
+          <li><%= msg %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="input-container">
+    <div class="input-group mb-3">
+      <div class="input-group-prepend">
+        <span class="input-group-text" id="basic-addon1">Title</span>
+<!--        <%#= form.label :title%><br>-->
+      </div>
+      <%= form.text_field :title, class: "form-control"%>
+    </div>
+
+    <div class="input-group">
+      <div class="input-group-prepend">
+        <span class="input-group-text">Text</span>
+  <!--      <%#= form.label :text %><br>-->
+      </div>
+      <%= form.text_area :text, class: "form-control text-area", :cols => 30 %>
+    </div>
+  </div>
+
+
+  <%= form.submit class: "btn btn-primary", type: "submit" %>
+
+
+<%	 end %>

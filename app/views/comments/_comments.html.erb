@@ -1,0 +1,20 @@
+<% @article.comments.each do |comment| %>
+  <p>
+    <strong>Commenter:</strong>
+    <%= comment.commenter %>
+  </p>
+
+  <p>
+    <strong>Comment:</strong>
+    <%= comment.body %>
+  </p>
+
+  <%=
+    button_to 'delete', [comment.article, comment],
+              class: "btn btn-outline-danger", type: "button", method: :delete,
+              data: {
+                confirm: "Confirm the operation", title: "Delete comment from " + comment.commenter + "?",
+                commit: "Delete"
+              }
+  %>
+<% end %>
