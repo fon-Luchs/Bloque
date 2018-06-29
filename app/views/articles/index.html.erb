@@ -4,14 +4,35 @@
   <section class="card" style="width: 69.4rem;">
     <div class="card-body">
       <h5 class="card-title"><%=	 article.title %></h5>
-      <p  class="card-text"> <%=	 article.text  %></p>
-      <table>
-        <tr>
-          <td><%=	 button_to 'show', article_path(article), :method => :get %></td>
-          <td><%=	 button_to 'edit', edit_article_path(article), :method => :get %></td>
-          <td><%=	 button_to 'delete', article_path(article), method: :delete, data: { confirm: 'What?' } %></td>
-        </tr>
-      </table>
+      <p  class="card-text"> <%=	 truncate(article.text, :length => 350)  %></p>
+      <div class="d-flex justify-content-center">
+        <table>
+          <tr>
+            <td>
+              <%=	 button_to 'show', article_path(article),
+                                :method => :get, type: "button",
+                                class: "btn btn-outline-info"
+              %>
+            </td>
+            <td>
+              <%=	 button_to 'edit', edit_article_path(article),
+                              :method => :get, type: "button",
+                              class: "btn btn-outline-primary"
+              %>
+            </td>
+            <td>
+              <%=
+                button_to 'delete', article_path(article), :method => :delete,
+                          data: {
+                              confirm: "Confirm the operation", title: "Delete " + article.title + "?",
+                              commit: "Delete"
+                          },
+                          type: "button", class: "btn btn-outline-danger"
+              %>
+            </td>
+          </tr>
+        </table>
+      </div>
     </div>
   </section>
 <%	 end %>

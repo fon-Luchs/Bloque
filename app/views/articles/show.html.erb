@@ -1,24 +1,26 @@
-<p>
-  <strong> <%=	 @article.title %> </strong>
-</p>
-
 <section>
   <p>
-    <strong>
-      <%=	 @article.text %>
-    </strong>
+    <h2> <%=	 @article.title %> </h2>
   </p>
 </section>
 
+<section>
+  <h5>
+      <%=	 @article.text %>
+  </h5>
+</section>
+
+<%=  button_to 'edit', edit_article_path,
+                 method: :get, type: "button",
+                 class: "btn btn-primary btn-lg btn-block"
+%>
+<%= button_to 'articles', articles_path,
+              method: :get, type: "button",
+              class: "btn btn-secondary btn-lg btn-block"
+%>
 <h2>Comments</h2>
 
 <%=	 render 'comments/comments' %>
 
 <h2>Add a comment:</h2>
 <%=	 render 'comments/form' %>
-<table>
-  <tr>
-    <td><%=	 link_to 'articles', articles_path %></td>
-    <td><%=  link_to 'edit', edit_article_path %></td>
-  </tr>
-</table>
