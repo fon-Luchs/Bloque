@@ -319,3 +319,70 @@ Processing by ArticlesController#index as HTML
 Completed 200 OK in 143ms (Views: 139.4ms | ActiveRecord: 0.3ms)
 
 
+Started GET "/articles/new" for 127.0.0.1 at 2018-07-02 13:35:20 +0300
+Processing by ArticlesController#new as HTML
+  Rendering articles/new.html.erb within layouts/application
+  Rendered articles/_form_field.html.erb (117.6ms)
+  Rendered articles/new.html.erb within layouts/application (119.7ms)
+  Rendered layouts/_navbar.html.erb (0.6ms)
+Completed 200 OK in 228ms (Views: 198.8ms | ActiveRecord: 1.3ms)
+
+
+Started POST "/articles" for 127.0.0.1 at 2018-07-02 13:35:26 +0300
+Processing by ArticlesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"ix8teX3h/GQWiqj9+DBsqB2MU/nHFi3GhbHc2HHcvPEi6AhP9fvesnWPrjhZ5jYrV6Z9OvZE5lQkzTABhrwLwA==", "article"=>{"title"=>"ttttttt", "text"=>"dsaaaaaaaaa"}, "commit"=>"Create Article"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/articles_controller.rb:18
+  [1m[36mArticle Create (0.7ms)[0m  [1m[32mINSERT INTO "articles" ("title", "text", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "ttttttt"], ["text", "dsaaaaaaaaa"], ["created_at", "2018-07-02 10:35:26.334376"], ["updated_at", "2018-07-02 10:35:26.334376"]]
+  ↳ app/controllers/articles_controller.rb:18
+  [1m[35m (124.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/articles_controller.rb:18
+Redirected to http://localhost:3000/articles/1
+Completed 302 Found in 134ms (ActiveRecord: 125.1ms)
+
+
+Started GET "/articles/1" for 127.0.0.1 at 2018-07-02 13:35:26 +0300
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mArticle Load (0.2ms)[0m  [1m[34mSELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/articles_controller.rb:26
+  Rendering articles/show.html.erb within layouts/application
+  [1m[36mComment Load (0.2ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."article_id" = ?[0m  [["article_id", 1]]
+  ↳ app/views/comments/_comments.html.erb:1
+  Rendered comments/_comments.html.erb (41.8ms)
+  Rendered comments/_form.html.erb (20.9ms)
+  Rendered articles/show.html.erb within layouts/application (65.8ms)
+  Rendered layouts/_navbar.html.erb (0.6ms)
+Completed 200 OK in 138ms (Views: 118.2ms | ActiveRecord: 1.1ms)
+
+
+Started POST "/articles/1/comments" for 127.0.0.1 at 2018-07-02 13:35:31 +0300
+Processing by CommentsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"r7T9LTIyTBO+SDQnwSqqJazvl4szJsWg8AluzyzMns8hsmngL5YDzeHaO9+IdSYWioKGzx9LVroqbxxdmaWyIQ==", "comment"=>{"commenter"=>"sssssssssssssss", "body"=>"ssssssssssssssss"}, "commit"=>"Create Comment", "article_id"=>"1"}
+  [1m[36mArticle Load (0.2ms)[0m  [1m[34mSELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/comments_controller.rb:6
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/comments_controller.rb:7
+  [1m[36mComment Create (0.6ms)[0m  [1m[32mINSERT INTO "comments" ("commenter", "body", "article_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["commenter", "sssssssssssssss"], ["body", "ssssssssssssssss"], ["article_id", 1], ["created_at", "2018-07-02 10:35:31.146801"], ["updated_at", "2018-07-02 10:35:31.146801"]]
+  ↳ app/controllers/comments_controller.rb:7
+  [1m[35m (218.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/comments_controller.rb:7
+Redirected to http://localhost:3000/articles/1
+Completed 302 Found in 231ms (ActiveRecord: 219.1ms)
+
+
+Started GET "/articles/1" for 127.0.0.1 at 2018-07-02 13:35:31 +0300
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mArticle Load (0.2ms)[0m  [1m[34mSELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/articles_controller.rb:26
+  Rendering articles/show.html.erb within layouts/application
+  [1m[36mComment Load (0.2ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."article_id" = ?[0m  [["article_id", 1]]
+  ↳ app/views/comments/_comments.html.erb:1
+  Rendered comments/_comments.html.erb (3.9ms)
+  Rendered comments/_form.html.erb (3.3ms)
+  Rendered articles/show.html.erb within layouts/application (11.2ms)
+  Rendered layouts/_navbar.html.erb (0.9ms)
+Completed 200 OK in 108ms (Views: 104.6ms | ActiveRecord: 0.4ms)
+
+
