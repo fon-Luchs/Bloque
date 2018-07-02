@@ -1,5 +1,5 @@
 class CommentsController < ApplicationController
-  http_basic_authenticate_with name: "Admin", password: "Admin", only: :destroy
+  # http_basic_authenticate_with name: "Admin", password: "Admin", only: :destroy
 
 
   def create
