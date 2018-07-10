@@ -32,8 +32,15 @@
     </div>
   </div>
 
+  <div class="btn-toolbar" role="toolbar" aria-label="Toolbar with button groups">
+    <div class="btn-group mr-2" role="group" aria-label="First group">
+      <%= form.submit class: "btn btn-primary", type: "submit" %>
+      <%=	 button_to   'back', articles_path, :method => :get,
+                        class: "btn btn-dark", type: "button" %>
+    </div>
+  </div>
 
-  <%= form.submit class: "btn btn-primary", type: "submit" %>
+
 
 
 <%	 end %>
