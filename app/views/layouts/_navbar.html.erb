@@ -3,29 +3,12 @@
     <span class="navbar-toggler-icon"></span>
   </button>
   <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
-    <%= link_to 'Bloqe', root_path, class: "navbar-brand" %>
-    <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
 
-      <% if request.path == articles_path%>
-        <li class="nav-item">
-          <%=	 link_to 'Home', articles_path, class: "nav-link active" %> <span class="sr-only">(current)</span></a>
-        </li>
-      <% else %>
-        <li class="nav-item">
-          <%= link_to 'Home', articles_path, class: "nav-link" %> <span class="sr-only">(current)</span></a>
-        </li>
-      <% end %>
-
-      <% if request.path  %> <!-- == categories_path -->
-        <li class="nav-item">
-          <%=	 link_to 'Category', '#', class: "nav-link" %>
-        </li>
-      <% else %>
-        <li class="nav-item">
-          <%= link_to 'Category', '#', class: "nav-link active" %>
-        </li>
-      <% end %>
-    </ul>
+    <%   if user_signed_in? %>
+      <%=	 render 'layouts/lI_navsPart' %>
+    <%	 else %>
+      <%=	 render 'layouts/lO_navsPart' %>
+    <%	 end %>
 
     <div>
       <ul class="navbar-nav">
