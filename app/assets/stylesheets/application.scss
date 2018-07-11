@@ -14,16 +14,35 @@
  *= require_self
  */
 
+//@import "bootstrap-sprockets";
 @import "bootstrap";
 
+.content{
+    min-height: 2000px;
+}
+/*position: fixed;*/
+/*width: 100%;*/
+/*min-width: 500px;*/
+/*top: 0;*/
+/*transition: top 0.2s ease-in-out;*/
+
 .navbar{
-    background: none;
+  position: fixed;
+  width: 100%;
+  min-width: 500px;
+  height: 60px;
+  top: 0;
+  transition: top 0.2s ease-in-out;
 }
 
-.navbar-default{
-    background: none;
+.nav-up {
+  top: -105px;
 }
 
 ._nav-center-list{
     padding-left: 41%;
+}
+
+.logos{
+  margin-top: 50px;
 }
