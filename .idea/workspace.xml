@@ -3,16 +3,14 @@
   <component name="ChangeListManager">
     <list default="true" id="50361b81-163d-46f3-81ec-b670934f11eb" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/controllers/application_controller.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/application_controller.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/controllers/articles_controller.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/articles_controller.rb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/models/user.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/user.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/articles/index.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/articles/index.html.erb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/devise/registrations/new.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/devise/registrations/new.html.erb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/layouts/_navbar.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/layouts/_navbar.html.erb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/config/initializers/devise.rb" beforeDir="false" afterPath="$PROJECT_DIR$/config/initializers/devise.rb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/db/development.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db/development.sqlite3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/db/schema.rb" beforeDir="false" afterPath="$PROJECT_DIR$/db/schema.rb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/log/development.log" beforeDir="false" afterPath="$PROJECT_DIR$/log/development.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/cache/assets/sprockets/v3.0/WL/WLPfOJHI1roKC3XlpYB7dNYWv7d0QXwHpDXCvJaMX7g.cache" beforeDir="false" afterPath="$PROJECT_DIR$/tmp/cache/assets/sprockets/v3.0/WL/WLPfOJHI1roKC3XlpYB7dNYWv7d0QXwHpDXCvJaMX7g.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/cache/assets/sprockets/v3.0/xN/xN5SgYEogwFx_gO03GbUJS9Otot6XW2B0zXyDPnDYiU.cache" beforeDir="false" afterPath="$PROJECT_DIR$/tmp/cache/assets/sprockets/v3.0/xN/xN5SgYEogwFx_gO03GbUJS9Otot6XW2B0zXyDPnDYiU.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/cache/bootsnap-compile-cache/36/3f2d198892b9ce" beforeDir="false" afterPath="$PROJECT_DIR$/tmp/cache/bootsnap-compile-cache/36/3f2d198892b9ce" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/cache/bootsnap-compile-cache/c7/f9998d9c09c81e" beforeDir="false" afterPath="$PROJECT_DIR$/tmp/cache/bootsnap-compile-cache/c7/f9998d9c09c81e" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tmp/cache/bootsnap-load-path-cache" beforeDir="false" afterPath="$PROJECT_DIR$/tmp/cache/bootsnap-load-path-cache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tmp/pids/server.pid" beforeDir="false" afterPath="$PROJECT_DIR$/tmp/pids/server.pid" afterDir="false" />
     </list>
@@ -24,7 +22,7 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="CoverageDataManager">
-    <SUITE FILE_PATH="coverage/Practic@Development__Practic.rcov" NAME="Development: Practic Coverage Results" MODIFIED="1531396411737" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="Practic" />
+    <SUITE FILE_PATH="coverage/Practic@Development__Practic.rcov" NAME="Development: Practic Coverage Results" MODIFIED="1531400054639" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="Practic" />
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
@@ -45,8 +43,8 @@
       <file leaf-file-name="application_controller.rb" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/controllers/application_controller.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="380">
-              <caret line="20" selection-start-line="20" selection-end-line="20" />
+            <state relative-caret-position="133">
+              <caret line="7" column="25" selection-start-line="7" selection-start-column="25" selection-end-line="7" selection-end-column="25" />
             </state>
           </provider>
         </entry>
@@ -74,11 +72,14 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index.html.erb" pinned="false" current-in-tab="true">
+      <file leaf-file-name="index.html.erb" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/views/articles/index.html.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="396">
-              <caret line="44" column="23" selection-start-line="44" selection-start-column="8" selection-end-line="44" selection-end-column="23" />
+            <state relative-caret-position="57">
+              <caret line="3" column="31" lean-forward="true" selection-start-line="3" selection-start-column="31" selection-end-line="3" selection-end-column="31" />
+              <folding>
+                <element signature="n#style#0;n#section#0;n#!!top" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -92,11 +93,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="user.rb" pinned="false" current-in-tab="false">
+      <file leaf-file-name="user.rb" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/models/user.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="209">
-              <caret line="11" selection-start-line="11" selection-end-line="11" />
+            <state relative-caret-position="133">
+              <caret line="7" lean-forward="true" selection-start-line="7" selection-end-line="7" />
             </state>
           </provider>
         </entry>
@@ -104,8 +105,8 @@
       <file leaf-file-name="devise.rb" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/config/initializers/devise.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="420">
-              <caret line="285" selection-start-line="285" selection-end-line="285" />
+            <state relative-caret-position="472">
+              <caret line="287" lean-forward="true" selection-start-line="287" selection-end-line="287" />
             </state>
           </provider>
         </entry>
@@ -162,13 +163,13 @@
         <option value="$PROJECT_DIR$/app/assets/stylesheets/application.scss" />
         <option value="$PROJECT_DIR$/app/views/devise/registrations/new.html.erb" />
         <option value="$PROJECT_DIR$/db/schema.rb" />
-        <option value="$PROJECT_DIR$/config/initializers/devise.rb" />
-        <option value="$PROJECT_DIR$/app/models/user.rb" />
-        <option value="$PROJECT_DIR$/app/controllers/application_controller.rb" />
         <option value="$PROJECT_DIR$/app/views/layouts/_navbar.html.erb" />
         <option value="$PROJECT_DIR$/app/controllers/articles_controller.rb" />
         <option value="$PROJECT_DIR$/app/controllers/users_controller.rb" />
         <option value="$PROJECT_DIR$/app/views/articles/index.html.erb" />
+        <option value="$PROJECT_DIR$/config/initializers/devise.rb" />
+        <option value="$PROJECT_DIR$/app/controllers/application_controller.rb" />
+        <option value="$PROJECT_DIR$/app/models/user.rb" />
       </list>
     </option>
   </component>
@@ -471,25 +472,25 @@
       <workItem from="1531222835904" duration="5193000" />
       <workItem from="1531306833345" duration="17981000" />
       <workItem from="1531384063581" duration="3911000" />
-      <workItem from="1531394642360" duration="4739000" />
+      <workItem from="1531394642360" duration="5496000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="122032000" />
+    <option name="totallyTimeSpent" value="122789000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1920" height="1080" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.25" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" order="12" sideWeight="0.27916667" side_tool="true" visible="true" weight="0.3162839" />
       <window_info anchor="right" id="Database" order="3" />
       <window_info anchor="bottom" id="Database Changes" order="8" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="10" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.72083336" visible="true" weight="0.3162839" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.72083336" visible="true" weight="0.3162839" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Terminal" order="9" sideWeight="0.49947917" weight="0.32985386" />
       <window_info id="Favorites" order="2" side_tool="true" />
@@ -748,20 +749,6 @@
     <entry file="file://$PROJECT_DIR$/db/migrate/20180712113022_remove_user_name_from_users.rb">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/config/initializers/devise.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="420">
-          <caret line="285" selection-start-line="285" selection-end-line="285" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/models/user.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="209">
-          <caret line="11" selection-start-line="11" selection-end-line="11" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/helpers/users_helper.rb">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -786,13 +773,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/controllers/application_controller.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="380">
-          <caret line="20" selection-start-line="20" selection-end-line="20" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/controllers/users_controller.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="95">
@@ -802,8 +782,32 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views/articles/index.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="396">
-          <caret line="44" column="23" selection-start-line="44" selection-start-column="8" selection-end-line="44" selection-end-column="23" />
+        <state relative-caret-position="57">
+          <caret line="3" column="31" lean-forward="true" selection-start-line="3" selection-start-column="31" selection-end-line="3" selection-end-column="31" />
+          <folding>
+            <element signature="n#style#0;n#section#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/initializers/devise.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="472">
+          <caret line="287" lean-forward="true" selection-start-line="287" selection-end-line="287" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/controllers/application_controller.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="133">
+          <caret line="7" column="25" selection-start-line="7" selection-start-column="25" selection-end-line="7" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/models/user.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="133">
+          <caret line="7" lean-forward="true" selection-start-line="7" selection-end-line="7" />
         </state>
       </provider>
     </entry>

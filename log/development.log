@@ -11053,3 +11053,424 @@ Processing by ArticlesController#index as HTML
 Completed 200 OK in 51ms (Views: 48.6ms | ActiveRecord: 0.4ms)
 
 
+Started GET "/articles" for 127.0.0.1 at 2018-07-12 15:47:27 +0300
+Processing by ArticlesController#index as HTML
+  Rendering articles/index.html.erb within layouts/application
+  [1m[36mArticle Load (0.3ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  ↳ app/views/articles/index.html.erb:3
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/articles/index.html.erb:6
+  Rendered articles/index.html.erb within layouts/application (8.3ms)
+  Rendered layouts/_lO_navsPart.html.erb (0.4ms)
+  Rendered layouts/_navbar.html.erb (1.9ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 57ms (Views: 54.8ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2018-07-12 15:47:33 +0300
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/sessions/new.html.erb within layouts/application (14.4ms)
+  Rendered layouts/_lO_navsPart.html.erb (0.5ms)
+  Rendered layouts/_navbar.html.erb (2.3ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 63ms (Views: 61.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/articles" for 127.0.0.1 at 2018-07-12 15:47:36 +0300
+Processing by ArticlesController#index as HTML
+  Rendering articles/index.html.erb within layouts/application
+  [1m[36mArticle Load (0.2ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  ↳ app/views/articles/index.html.erb:3
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/articles/index.html.erb:6
+  Rendered articles/index.html.erb within layouts/application (12.6ms)
+  Rendered layouts/_lO_navsPart.html.erb (0.5ms)
+  Rendered layouts/_navbar.html.erb (2.1ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 56ms (Views: 53.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/articles" for 127.0.0.1 at 2018-07-12 15:47:43 +0300
+Processing by ArticlesController#index as HTML
+  Rendering articles/index.html.erb within layouts/application
+  [1m[36mArticle Load (0.4ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  ↳ app/views/articles/index.html.erb:3
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/articles/index.html.erb:6
+  Rendered articles/index.html.erb within layouts/application (8.5ms)
+  Rendered layouts/_lO_navsPart.html.erb (0.4ms)
+  Rendered layouts/_navbar.html.erb (1.8ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 65ms (Views: 62.7ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-07-12 15:47:44 +0300
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (0.9ms)
+  Rendered layouts/_lO_navsPart.html.erb (0.4ms)
+  Rendered layouts/_navbar.html.erb (2.0ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 67ms (Views: 64.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-07-12 15:48:00 +0300
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (1.1ms)
+  Rendered layouts/_lO_navsPart.html.erb (0.4ms)
+  Rendered layouts/_navbar.html.erb (1.8ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 60ms (Views: 58.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/articles" for 127.0.0.1 at 2018-07-12 15:48:01 +0300
+Processing by ArticlesController#index as HTML
+  Rendering articles/index.html.erb within layouts/application
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  ↳ app/views/articles/index.html.erb:3
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/articles/index.html.erb:6
+  Rendered articles/index.html.erb within layouts/application (3.4ms)
+  Rendered layouts/_lO_navsPart.html.erb (0.5ms)
+  Rendered layouts/_navbar.html.erb (2.1ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 44ms (Views: 43.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2018-07-12 15:48:06 +0300
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/sessions/new.html.erb within layouts/application (7.6ms)
+  Rendered layouts/_lO_navsPart.html.erb (0.4ms)
+  Rendered layouts/_navbar.html.erb (1.8ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 48ms (Views: 46.4ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2018-07-12 15:48:12 +0300
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"FVPJnzwN59/topsp2YC9O+mDEuU3aE0e6K7pETLcnigKFhRTuZx7a56f69Rdzd+wpj6RaLaGtMgwmr6LPXgcfg==", "user"=>{"email"=>"lvo123ua@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms)
+
+
+Processing by Devise::SessionsController#new as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"FVPJnzwN59/topsp2YC9O+mDEuU3aE0e6K7pETLcnigKFhRTuZx7a56f69Rdzd+wpj6RaLaGtMgwmr6LPXgcfg==", "user"=>{"email"=>"lvo123ua@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+Unpermitted parameter: :email
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/sessions/new.html.erb within layouts/application (5.0ms)
+  Rendered layouts/_lO_navsPart.html.erb (0.4ms)
+  Rendered layouts/_navbar.html.erb (1.9ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 167ms (Views: 42.4ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2018-07-12 15:48:24 +0300
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"04WU0ZBwqme8IQQUq8nnJpQcAlPMMBYZmuvDeAyfdiHT6WuB3oF+4j9sDQ1EqVFsskIyqMn/KWrKTPsFGniayA==", "user"=>{"email"=>"lvo123ua@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms)
+
+
+Processing by Devise::SessionsController#new as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"04WU0ZBwqme8IQQUq8nnJpQcAlPMMBYZmuvDeAyfdiHT6WuB3oF+4j9sDQ1EqVFsskIyqMn/KWrKTPsFGniayA==", "user"=>{"email"=>"lvo123ua@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+Unpermitted parameter: :email
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/sessions/new.html.erb within layouts/application (4.9ms)
+  Rendered layouts/_lO_navsPart.html.erb (0.5ms)
+  Rendered layouts/_navbar.html.erb (2.2ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 163ms (Views: 39.9ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2018-07-12 15:48:31 +0300
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"kHFqMf+qDWBf90EMH7ilEgsWaYmWJbtGrRn8/UERr/uQHZVhsVvZ5dy6SBXw2BNYLUhZcpPqhDX9vsSAV/ZDEg==", "user"=>{"email"=>"fon_luchs", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+Completed 401 Unauthorized in 0ms (ActiveRecord: 0.0ms)
+
+
+Processing by Devise::SessionsController#new as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"kHFqMf+qDWBf90EMH7ilEgsWaYmWJbtGrRn8/UERr/uQHZVhsVvZ5dy6SBXw2BNYLUhZcpPqhDX9vsSAV/ZDEg==", "user"=>{"email"=>"fon_luchs", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+Unpermitted parameter: :email
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/sessions/new.html.erb within layouts/application (4.9ms)
+  Rendered layouts/_lO_navsPart.html.erb (0.4ms)
+  Rendered layouts/_navbar.html.erb (2.3ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 167ms (Views: 42.9ms | ActiveRecord: 0.0ms)
+
+
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mUser Destroy (82.5ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = ?[0m  [["id", 1]]
+Started GET "/users/sign_up" for 127.0.0.1 at 2018-07-12 15:49:09 +0300
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (0.8ms)
+  Rendered devise/registrations/new.html.erb within layouts/application (8.8ms)
+  Rendered layouts/_lO_navsPart.html.erb (0.5ms)
+  Rendered layouts/_navbar.html.erb (2.1ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 50ms (Views: 49.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2018-07-12 15:49:23 +0300
+Processing by Devise::RegistrationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"axIMUXD/eQflTTchZnz6CUIunGz0SyqaTUNDd7MurQlrfvMBPg6tgmYAPjiJHExDZHCsl/GEFekd5HsKpclB4A==", "user"=>{"email"=>"lvo123ua@gmail.com", "user_name"=>"fon_luchs", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /home/bywa/.gem/ruby/2.5.0/gems/sprockets-rails-3.2.1/lib/sprockets/rails/quiet_assets.rb:13
+  [1m[36mUser Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "lvo123ua@gmail.com"], ["LIMIT", 1]]
+  ↳ /home/bywa/.gem/ruby/2.5.0/gems/sprockets-rails-3.2.1/lib/sprockets/rails/quiet_assets.rb:13
+  [1m[36mUser Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "fon_luchs"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:28
+  [1m[36mUser Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE LOWER("users"."user_name") = LOWER(?) LIMIT ?[0m  [["user_name", "fon_luchs"], ["LIMIT", 1]]
+  ↳ /home/bywa/.gem/ruby/2.5.0/gems/sprockets-rails-3.2.1/lib/sprockets/rails/quiet_assets.rb:13
+  [1m[36mUser Create (0.5ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at", "user_name") VALUES (?, ?, ?, ?, ?)[0m  [["email", "lvo123ua@gmail.com"], ["encrypted_password", "$2a$11$1dniAwHYPKTdBisSnEfCFOzRq05ueQmCvET36YqwbgqfJPr4jDpHC"], ["created_at", "2018-07-12 12:49:23.717349"], ["updated_at", "2018-07-12 12:49:23.717349"], ["user_name", "fon_luchs"]]
+  ↳ /home/bywa/.gem/ruby/2.5.0/gems/sprockets-rails-3.2.1/lib/sprockets/rails/quiet_assets.rb:13
+  [1m[35m (80.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /home/bywa/.gem/ruby/2.5.0/gems/sprockets-rails-3.2.1/lib/sprockets/rails/quiet_assets.rb:13
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /home/bywa/.gem/ruby/2.5.0/gems/sprockets-rails-3.2.1/lib/sprockets/rails/quiet_assets.rb:13
+  [1m[36mUser Update (0.5ms)[0m  [1m[33mUPDATE "users" SET "sign_in_count" = ?, "current_sign_in_at" = ?, "last_sign_in_at" = ?, "current_sign_in_ip" = ?, "last_sign_in_ip" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["sign_in_count", 1], ["current_sign_in_at", "2018-07-12 12:49:23.801700"], ["last_sign_in_at", "2018-07-12 12:49:23.801700"], ["current_sign_in_ip", "127.0.0.1"], ["last_sign_in_ip", "127.0.0.1"], ["updated_at", "2018-07-12 12:49:23.802795"], ["id", 1]]
+  ↳ /home/bywa/.gem/ruby/2.5.0/gems/sprockets-rails-3.2.1/lib/sprockets/rails/quiet_assets.rb:13
+  [1m[35m (388.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /home/bywa/.gem/ruby/2.5.0/gems/sprockets-rails-3.2.1/lib/sprockets/rails/quiet_assets.rb:13
+Redirected to http://localhost:3000/articles
+Completed 302 Found in 612ms (ActiveRecord: 470.3ms)
+
+
+Started GET "/articles" for 127.0.0.1 at 2018-07-12 15:49:24 +0300
+Processing by ArticlesController#index as HTML
+  Rendering articles/index.html.erb within layouts/application
+  [1m[36mArticle Load (0.3ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  ↳ app/views/articles/index.html.erb:3
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/articles/index.html.erb:6
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/articles/index.html.erb:20
+  Rendered articles/index.html.erb within layouts/application (10.7ms)
+  Rendered layouts/_lI_navsPart.html.erb (0.3ms)
+  Rendered layouts/_navbar.html.erb (1.9ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 56ms (Views: 53.4ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/articles" for 127.0.0.1 at 2018-07-12 15:52:51 +0300
+Processing by ArticlesController#index as HTML
+  Rendering articles/index.html.erb within layouts/application
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  ↳ app/views/articles/index.html.erb:3
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/articles/index.html.erb:6
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/articles/index.html.erb:20
+  Rendered articles/index.html.erb within layouts/application (16.3ms)
+  Rendered layouts/_lI_navsPart.html.erb (0.3ms)
+  Rendered layouts/_navbar.html.erb (1.9ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 54ms (Views: 49.7ms | ActiveRecord: 1.1ms)
+
+
+Started DELETE "/users/sign_out" for 127.0.0.1 at 2018-07-12 15:52:56 +0300
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"HEdtTF9WSiMJdViWLQs3runGuDvm61nF56K5IkyjhugcK5IcEaeepoo4UY/Ca4Hkz5iIwOMkZra3BYFfWkRqAQ=="}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/bywa/.gem/ruby/2.5.0/gems/sprockets-rails-3.2.1/lib/sprockets/rails/quiet_assets.rb:13
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.4ms)
+
+
+  
+NoMethodError (undefined method `for' for #<Devise::ParameterSanitizer:0x00007f7aa5d28c60>):
+  
+app/controllers/application_controller.rb:7:in `configure_permitted_parameters'
+Started DELETE "/users/sign_out" for 127.0.0.1 at 2018-07-12 15:54:06 +0300
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"HEdtTF9WSiMJdViWLQs3runGuDvm61nF56K5IkyjhugcK5IcEaeepoo4UY/Ca4Hkz5iIwOMkZra3BYFfWkRqAQ=="}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/bywa/.gem/ruby/2.5.0/gems/sprockets-rails-3.2.1/lib/sprockets/rails/quiet_assets.rb:13
+Completed 500 Internal Server Error in 10ms (ActiveRecord: 0.6ms)
+
+
+  
+NoMethodError (undefined method `for' for #<Devise::ParameterSanitizer:0x00007f7a996b8aa8>):
+  
+app/controllers/application_controller.rb:8:in `configure_permitted_parameters'
+Started GET "/articles" for 127.0.0.1 at 2018-07-12 15:54:11 +0300
+Processing by ArticlesController#index as HTML
+  Rendering articles/index.html.erb within layouts/application
+  [1m[36mArticle Load (0.3ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  ↳ app/views/articles/index.html.erb:3
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/articles/index.html.erb:6
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/articles/index.html.erb:20
+  Rendered articles/index.html.erb within layouts/application (19.9ms)
+  Rendered layouts/_lI_navsPart.html.erb (0.3ms)
+  Rendered layouts/_navbar.html.erb (1.8ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 66ms (Views: 58.0ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/articles" for 127.0.0.1 at 2018-07-12 15:54:12 +0300
+Processing by ArticlesController#index as HTML
+  Rendering articles/index.html.erb within layouts/application
+  [1m[36mArticle Load (0.4ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  ↳ app/views/articles/index.html.erb:3
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/articles/index.html.erb:6
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/articles/index.html.erb:20
+  Rendered articles/index.html.erb within layouts/application (10.0ms)
+  Rendered layouts/_lI_navsPart.html.erb (0.3ms)
+  Rendered layouts/_navbar.html.erb (1.6ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 55ms (Views: 52.5ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/articles" for 127.0.0.1 at 2018-07-12 15:54:17 +0300
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/bywa/.gem/ruby/2.5.0/gems/sprockets-rails-3.2.1/lib/sprockets/rails/quiet_assets.rb:13
+Processing by ArticlesController#index as HTML
+  Rendering articles/index.html.erb within layouts/application
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  ↳ app/views/articles/index.html.erb:3
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/articles/index.html.erb:6
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/articles/index.html.erb:20
+  Rendered articles/index.html.erb within layouts/application (19.3ms)
+  Rendered layouts/_lI_navsPart.html.erb (0.6ms)
+  Rendered layouts/_navbar.html.erb (2.8ms)
+  Rendered layouts/_footer.html.erb (0.5ms)
+Completed 200 OK in 363ms (Views: 354.1ms | ActiveRecord: 1.0ms)
+
+
+Started DELETE "/users/sign_out" for 127.0.0.1 at 2018-07-12 15:54:19 +0300
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"p79tHcVVE879pT0ZpxYs/cO7CoNYEcjMWVy+8a+wbBun05JNi6THS37oNABIdpq35eU6eF3e978J+4aMuVeA8g=="}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/bywa/.gem/ruby/2.5.0/gems/sprockets-rails-3.2.1/lib/sprockets/rails/quiet_assets.rb:13
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.1ms)
+
+
+  
+NoMethodError (undefined method `for' for #<Devise::ParameterSanitizer:0x00007fe8280df238>):
+  
+app/controllers/application_controller.rb:8:in `configure_permitted_parameters'
+Started DELETE "/users/sign_out" for 127.0.0.1 at 2018-07-12 15:55:46 +0300
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"p79tHcVVE879pT0ZpxYs/cO7CoNYEcjMWVy+8a+wbBun05JNi6THS37oNABIdpq35eU6eF3e978J+4aMuVeA8g=="}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/bywa/.gem/ruby/2.5.0/gems/sprockets-rails-3.2.1/lib/sprockets/rails/quiet_assets.rb:13
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /home/bywa/.gem/ruby/2.5.0/gems/sprockets-rails-3.2.1/lib/sprockets/rails/quiet_assets.rb:13
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /home/bywa/.gem/ruby/2.5.0/gems/sprockets-rails-3.2.1/lib/sprockets/rails/quiet_assets.rb:13
+Redirected to http://localhost:3000/users/sign_in
+Completed 302 Found in 20ms (ActiveRecord: 0.6ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2018-07-12 15:55:46 +0300
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/sessions/new.html.erb within layouts/application (12.6ms)
+  Rendered layouts/_lO_navsPart.html.erb (0.4ms)
+  Rendered layouts/_navbar.html.erb (2.3ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 54ms (Views: 51.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2018-07-12 15:55:54 +0300
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"rgPM9E0lxPJXURzPT8OiDpVMpNhJWOTEP6QPHXyG69nxpqxnm4jqCX0iTlkDIdJi8glrHc9Tkm1yTXDhOQYvBg==", "user"=>{"email"=>"lvo123ua@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.0ms)
+
+
+  
+NameError (undefined local variable or method `login' for #<Class:0x00007fe838892128>):
+  
+app/models/user.rb:20:in `find_for_database_authentication'
+Started POST "/users/sign_in" for 127.0.0.1 at 2018-07-12 15:56:13 +0300
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"rgPM9E0lxPJXURzPT8OiDpVMpNhJWOTEP6QPHXyG69nxpqxnm4jqCX0iTlkDIdJi8glrHc9Tkm1yTXDhOQYvBg==", "user"=>{"email"=>"lvo123ua@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["email", "lvo123ua@gmail.com"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:23
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /home/bywa/.gem/ruby/2.5.0/gems/sprockets-rails-3.2.1/lib/sprockets/rails/quiet_assets.rb:13
+  [1m[36mUser Update (0.2ms)[0m  [1m[33mUPDATE "users" SET "current_sign_in_at" = ?, "sign_in_count" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["current_sign_in_at", "2018-07-12 12:56:13.311549"], ["sign_in_count", 2], ["updated_at", "2018-07-12 12:56:13.312245"], ["id", 1]]
+  ↳ /home/bywa/.gem/ruby/2.5.0/gems/sprockets-rails-3.2.1/lib/sprockets/rails/quiet_assets.rb:13
+  [1m[35m (80.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /home/bywa/.gem/ruby/2.5.0/gems/sprockets-rails-3.2.1/lib/sprockets/rails/quiet_assets.rb:13
+Redirected to http://localhost:3000/articles
+Completed 302 Found in 221ms (ActiveRecord: 81.6ms)
+
+
+Started GET "/articles" for 127.0.0.1 at 2018-07-12 15:56:13 +0300
+Processing by ArticlesController#index as HTML
+  Rendering articles/index.html.erb within layouts/application
+  [1m[36mArticle Load (0.2ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  ↳ app/views/articles/index.html.erb:3
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/articles/index.html.erb:6
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/articles/index.html.erb:20
+  Rendered articles/index.html.erb within layouts/application (14.5ms)
+  Rendered layouts/_lI_navsPart.html.erb (0.3ms)
+  Rendered layouts/_navbar.html.erb (1.6ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 60ms (Views: 51.9ms | ActiveRecord: 1.3ms)
+
+
+Started DELETE "/users/sign_out" for 127.0.0.1 at 2018-07-12 15:56:16 +0300
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"Jj/YbH/HdHBGFt4PdV8UBW+6j44gQvkSLCubeiAoWjylnUrdgVyi5CEr/5sIAp0ZZNoYy1dS6M6ubNIxabm1Ig=="}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/bywa/.gem/ruby/2.5.0/gems/sprockets-rails-3.2.1/lib/sprockets/rails/quiet_assets.rb:13
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /home/bywa/.gem/ruby/2.5.0/gems/sprockets-rails-3.2.1/lib/sprockets/rails/quiet_assets.rb:13
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /home/bywa/.gem/ruby/2.5.0/gems/sprockets-rails-3.2.1/lib/sprockets/rails/quiet_assets.rb:13
+Redirected to http://localhost:3000/users/sign_in
+Completed 302 Found in 8ms (ActiveRecord: 0.7ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2018-07-12 15:56:16 +0300
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/sessions/new.html.erb within layouts/application (8.0ms)
+  Rendered layouts/_lO_navsPart.html.erb (0.4ms)
+  Rendered layouts/_navbar.html.erb (2.0ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 57ms (Views: 55.3ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2018-07-12 15:56:22 +0300
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"k9LFOC/YtsvhKGP6YJAvFibUYZy5qSCThi7Q2FN/tdTB57xxz9fc8g3DiqMtaF9S+j6iu+0FteQiFspyS8jgTg==", "user"=>{"email"=>"lvo123ua@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["email", "lvo123ua@gmail.com"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:23
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /home/bywa/.gem/ruby/2.5.0/gems/sprockets-rails-3.2.1/lib/sprockets/rails/quiet_assets.rb:13
+  [1m[36mUser Update (0.8ms)[0m  [1m[33mUPDATE "users" SET "current_sign_in_at" = ?, "last_sign_in_at" = ?, "sign_in_count" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["current_sign_in_at", "2018-07-12 12:56:22.768919"], ["last_sign_in_at", "2018-07-12 12:56:13.311549"], ["sign_in_count", 3], ["updated_at", "2018-07-12 12:56:22.769593"], ["id", 1]]
+  ↳ /home/bywa/.gem/ruby/2.5.0/gems/sprockets-rails-3.2.1/lib/sprockets/rails/quiet_assets.rb:13
+  [1m[35m (77.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /home/bywa/.gem/ruby/2.5.0/gems/sprockets-rails-3.2.1/lib/sprockets/rails/quiet_assets.rb:13
+Redirected to http://localhost:3000/articles
+Completed 302 Found in 221ms (ActiveRecord: 79.0ms)
+
+
+Started GET "/articles" for 127.0.0.1 at 2018-07-12 15:56:22 +0300
+Processing by ArticlesController#index as HTML
+  Rendering articles/index.html.erb within layouts/application
+  [1m[36mArticle Load (0.2ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  ↳ app/views/articles/index.html.erb:3
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/articles/index.html.erb:6
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/articles/index.html.erb:20
+  Rendered articles/index.html.erb within layouts/application (4.1ms)
+  Rendered layouts/_lI_navsPart.html.erb (0.3ms)
+  Rendered layouts/_navbar.html.erb (2.5ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 43ms (Views: 41.5ms | ActiveRecord: 0.5ms)
+
+
