@@ -1,3 +1,7 @@
+<%	 if current_user.articles.count.zero? %>
+  <%=	 render 'layouts/no_content' %>
+<%	 end %>
+
 <%  current_user.articles.each do |article| %>
   <section class="card" style="width: 69.4rem;">
     <div class="card-top">
