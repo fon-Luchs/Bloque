@@ -1,0 +1,30 @@
+<div class="d-flex justify-content-center">
+  <table>
+    <tr>
+      <td>
+        <%=	 button_to 'index', article_path(article),
+                        :method => :get, type: "button",
+                        class: "btn btn-outline-info"
+        %>
+      </td>
+      <%	 if article.user == current_user %>
+        <td>
+          <%=	 button_to 'edit', edit_article_path(article),
+                          :method => :get, type: "button",
+                          class: "btn btn-outline-primary"
+          %>
+        </td>
+        <td>
+          <%=
+            button_to 'delete', article_path(article), :method => :delete,
+                      data: {
+                          confirm: "Confirm the operation", title: "Delete " + article.title + "?",
+                          commit: "Delete"
+                      },
+                      type: "button", class: "btn btn-outline-danger"
+          %>
+        </td>
+      <%  end %>
+    </tr>
+  </table>
+</div>
