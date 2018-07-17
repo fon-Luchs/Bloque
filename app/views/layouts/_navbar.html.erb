@@ -22,9 +22,15 @@
           <li class="nav-item">
             <%= link_to 'Add', new_article_path, class: "nav-link" %>
           </li>
-          <li class="nav-item">
-            <%= link_to current_user.user_name, current_user, class: "nav-link" %>
-          </li>
+          <% if request.path == user_path(current_user) %>
+            <li class="nav-item">
+              <%= link_to current_user.user_name, current_user, class: "nav-link active" %>
+            </li>
+          <% else %>
+            <li class="nav-item">
+              <%= link_to current_user.user_name, current_user, class: "nav-link" %>
+            </li>
+          <% end %>
           <li class="nav-item">
             <%= link_to 'Logout', destroy_user_session_path, method: :delete, class: "nav-link" %>
           </li>
