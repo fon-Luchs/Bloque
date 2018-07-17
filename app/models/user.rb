@@ -11,6 +11,7 @@ class User < ApplicationRecord
   validates_format_of :user_name, with: /^[a-zA-Z0-9_\.]*$/, :multiline => true
 
   has_many :articles
+  has_many :comments
   def login
     @login || self.user_name || self.email
   end
