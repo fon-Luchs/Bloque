@@ -2,7 +2,9 @@ class CategoriesController < ApplicationController
 
   def create
     @article  = Article.find(params[:article_id])
-    @category = @article.categories.create(category_params)
+    @category = Category.create(category_params)
+
+      ## if !!
   end
 
   private

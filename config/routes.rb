@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  get 'filters/create'
   devise_for :users
   get 'articles/index'
   get 'articles/new'
