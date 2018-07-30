@@ -36835,3 +36835,653 @@ Completed 500 Internal Server Error in 14ms (ActiveRecord: 3.6ms)
 ActiveRecord::InvalidForeignKey (SQLite3::ConstraintException: FOREIGN KEY constraint failed: DELETE FROM "articles" WHERE "articles"."id" = ?):
   
 app/controllers/articles_controller.rb:37:in `destroy'
+Started GET "/articles" for 127.0.0.1 at 2018-07-30 21:15:47 +0300
+Processing by ArticlesController#index as HTML
+  Rendering articles/index.html.erb within layouts/application
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "articles"[0m
+  ↳ app/views/articles/index.html.erb:3
+  [1m[36mArticle Load (0.3ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  ↳ app/views/articles/index.html.erb:7
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/articles/index.html.erb:10
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT "categories".* FROM "categories" INNER JOIN "filters" ON "categories"."id" = "filters"."category_id" WHERE "filters"."article_id" = ?[0m  [["article_id", 8]]
+  ↳ app/views/articles/index.html.erb:16
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/articles/index.html.erb:30
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/articles/index.html.erb:10
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories" INNER JOIN "filters" ON "categories"."id" = "filters"."category_id" WHERE "filters"."article_id" = ?[0m  [["article_id", 9]]
+  ↳ app/views/articles/index.html.erb:16
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/articles/index.html.erb:10
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories" INNER JOIN "filters" ON "categories"."id" = "filters"."category_id" WHERE "filters"."article_id" = ?[0m  [["article_id", 25]]
+  ↳ app/views/articles/index.html.erb:16
+  Rendered articles/index.html.erb within layouts/application (149.1ms)
+  Rendered layouts/_lI_navsPart.html.erb (1.2ms)
+  Rendered layouts/_navbar.html.erb (6.6ms)
+  Rendered layouts/_footer.html.erb (0.9ms)
+Completed 200 OK in 552ms (Views: 490.1ms | ActiveRecord: 22.5ms)
+
+
+Started DELETE "/articles/25" for 127.0.0.1 at 2018-07-30 21:15:55 +0300
+Processing by ArticlesController#destroy as HTML
+  Parameters: {"authenticity_token"=>"SjuyAqcJqjRzN573+DatHaNpoeqrMosyXrQvdTVSpMGzdKTAqRW3eKyTJmXzAdRbwJwFLzyhku9oXXo/E4Puqg==", "id"=>"25"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/bywa/.gem/ruby/2.5.0/gems/sprockets-rails-3.2.1/lib/sprockets/rails/quiet_assets.rb:13
+  [1m[36mArticle Load (0.4ms)[0m  [1m[34mSELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 25], ["LIMIT", 1]]
+  ↳ app/controllers/articles_controller.rb:46
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/articles_controller.rb:37
+  [1m[36mComment Load (0.7ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."article_id" = ?[0m  [["article_id", 25]]
+  ↳ app/controllers/articles_controller.rb:37
+  [1m[36mArticle Destroy (2.2ms)[0m  [1m[31mDELETE FROM "articles" WHERE "articles"."id" = ?[0m  [["id", 25]]
+  ↳ app/controllers/articles_controller.rb:37
+  [1m[35m (0.3ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/articles_controller.rb:37
+Completed 500 Internal Server Error in 31ms (ActiveRecord: 12.3ms)
+
+
+  
+ActiveRecord::InvalidForeignKey (SQLite3::ConstraintException: FOREIGN KEY constraint failed: DELETE FROM "articles" WHERE "articles"."id" = ?):
+  
+app/controllers/articles_controller.rb:37:in `destroy'
+Started DELETE "/articles/25" for 127.0.0.1 at 2018-07-30 21:26:44 +0300
+Processing by ArticlesController#destroy as HTML
+  Parameters: {"authenticity_token"=>"SjuyAqcJqjRzN573+DatHaNpoeqrMosyXrQvdTVSpMGzdKTAqRW3eKyTJmXzAdRbwJwFLzyhku9oXXo/E4Puqg==", "id"=>"25"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/bywa/.gem/ruby/2.5.0/gems/sprockets-rails-3.2.1/lib/sprockets/rails/quiet_assets.rb:13
+  [1m[36mArticle Load (0.3ms)[0m  [1m[34mSELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 25], ["LIMIT", 1]]
+  ↳ app/controllers/articles_controller.rb:46
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/articles_controller.rb:37
+  [1m[36mComment Load (1.4ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."article_id" = ?[0m  [["article_id", 25]]
+  ↳ app/controllers/articles_controller.rb:37
+  [1m[36mArticle Destroy (2.0ms)[0m  [1m[31mDELETE FROM "articles" WHERE "articles"."id" = ?[0m  [["id", 25]]
+  ↳ app/controllers/articles_controller.rb:37
+  [1m[35m (0.3ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/articles_controller.rb:37
+Completed 500 Internal Server Error in 14ms (ActiveRecord: 4.5ms)
+
+
+  
+ActiveRecord::InvalidForeignKey (SQLite3::ConstraintException: FOREIGN KEY constraint failed: DELETE FROM "articles" WHERE "articles"."id" = ?):
+  
+app/controllers/articles_controller.rb:37:in `destroy'
+Started DELETE "/articles/25" for 127.0.0.1 at 2018-07-30 21:28:31 +0300
+Processing by ArticlesController#destroy as HTML
+  Parameters: {"authenticity_token"=>"SjuyAqcJqjRzN573+DatHaNpoeqrMosyXrQvdTVSpMGzdKTAqRW3eKyTJmXzAdRbwJwFLzyhku9oXXo/E4Puqg==", "id"=>"25"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/bywa/.gem/ruby/2.5.0/gems/sprockets-rails-3.2.1/lib/sprockets/rails/quiet_assets.rb:13
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 25], ["LIMIT", 1]]
+  ↳ app/controllers/articles_controller.rb:46
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/articles_controller.rb:37
+  [1m[36mComment Load (0.1ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."article_id" = ?[0m  [["article_id", 25]]
+  ↳ app/controllers/articles_controller.rb:37
+  [1m[36mFilter Load (0.1ms)[0m  [1m[34mSELECT "filters".* FROM "filters" WHERE "filters"."article_id" = ?[0m  [["article_id", 25]]
+  ↳ app/controllers/articles_controller.rb:37
+  [1m[36mFilter Destroy (102.9ms)[0m  [1m[31mDELETE FROM "filters" WHERE "filters"."id" = ?[0m  [["id", 4]]
+  ↳ app/controllers/articles_controller.rb:37
+  [1m[36mFilter Destroy (0.2ms)[0m  [1m[31mDELETE FROM "filters" WHERE "filters"."id" = ?[0m  [["id", 5]]
+  ↳ app/controllers/articles_controller.rb:37
+  [1m[36mArticle Destroy (0.3ms)[0m  [1m[31mDELETE FROM "articles" WHERE "articles"."id" = ?[0m  [["id", 25]]
+  ↳ app/controllers/articles_controller.rb:37
+  [1m[35m (101.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/articles_controller.rb:37
+Redirected to http://localhost:3000/articles
+Completed 302 Found in 241ms (ActiveRecord: 206.4ms)
+
+
+Started GET "/articles" for 127.0.0.1 at 2018-07-30 21:28:32 +0300
+Processing by ArticlesController#index as HTML
+  Rendering articles/index.html.erb within layouts/application
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "articles"[0m
+  ↳ app/views/articles/index.html.erb:3
+  [1m[36mArticle Load (0.3ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  ↳ app/views/articles/index.html.erb:7
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/articles/index.html.erb:10
+  [1m[36mCategory Load (0.4ms)[0m  [1m[34mSELECT "categories".* FROM "categories" INNER JOIN "filters" ON "categories"."id" = "filters"."category_id" WHERE "filters"."article_id" = ?[0m  [["article_id", 8]]
+  ↳ app/views/articles/index.html.erb:16
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/articles/index.html.erb:30
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/articles/index.html.erb:10
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT "categories".* FROM "categories" INNER JOIN "filters" ON "categories"."id" = "filters"."category_id" WHERE "filters"."article_id" = ?[0m  [["article_id", 9]]
+  ↳ app/views/articles/index.html.erb:16
+  Rendered articles/index.html.erb within layouts/application (38.1ms)
+  Rendered layouts/_lI_navsPart.html.erb (0.4ms)
+  Rendered layouts/_navbar.html.erb (2.2ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 118ms (Views: 111.8ms | ActiveRecord: 3.6ms)
+
+
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ bin/rails:9
+  [1m[36mFilter Load (0.3ms)[0m  [1m[34mSELECT  "filters".* FROM "filters" ORDER BY "filters"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" ORDER BY "categories"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mCategory Load (0.9ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" LIMIT ?[0m  [["LIMIT", 11]]
+Started GET "/articles" for 127.0.0.1 at 2018-07-30 21:29:57 +0300
+Processing by ArticlesController#index as HTML
+Completed 500 Internal Server Error in 11ms (ActiveRecord: 0.0ms)
+
+
+  
+ArgumentError (Unknown key: :delendent. Valid keys are: :class_name, :anonymous_class, :foreign_key, :validate, :autosave, :table_name, :before_add, :after_add, :before_remove, :after_remove, :extend, :primary_key, :dependent, :as, :through, :source, :source_type, :inverse_of, :counter_cache, :join_table, :foreign_type, :index_errors):
+  
+app/models/article.rb:6:in `<class:Article>'
+app/models/article.rb:1:in `<main>'
+app/controllers/articles_controller.rb:5:in `index'
+Started GET "/articles/25" for 127.0.0.1 at 2018-07-30 21:30:21 +0300
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"25"}
+  [1m[36mArticle Load (0.3ms)[0m  [1m[34mSELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 25], ["LIMIT", 1]]
+  ↳ app/controllers/articles_controller.rb:46
+Completed 404 Not Found in 18ms (ActiveRecord: 2.2ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Article with 'id'=25):
+  
+app/controllers/articles_controller.rb:46:in `set_article'
+Started GET "/articles/new" for 127.0.0.1 at 2018-07-30 21:30:25 +0300
+Processing by ArticlesController#new as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/bywa/.gem/ruby/2.5.0/gems/sprockets-rails-3.2.1/lib/sprockets/rails/quiet_assets.rb:13
+  Rendering articles/new.html.erb within layouts/application
+  Rendered articles/_form_field.html.erb (15.4ms)
+  Rendered articles/new.html.erb within layouts/application (25.2ms)
+  Rendered layouts/_lI_navsPart.html.erb (0.4ms)
+  Rendered layouts/_navbar.html.erb (2.5ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 178ms (Views: 117.4ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/articles" for 127.0.0.1 at 2018-07-30 21:30:31 +0300
+Processing by ArticlesController#index as HTML
+  Rendering articles/index.html.erb within layouts/application
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "articles"[0m
+  ↳ app/views/articles/index.html.erb:3
+  [1m[36mArticle Load (0.3ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  ↳ app/views/articles/index.html.erb:7
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/articles/index.html.erb:10
+  [1m[36mCategory Load (0.4ms)[0m  [1m[34mSELECT "categories".* FROM "categories" INNER JOIN "filters" ON "categories"."id" = "filters"."category_id" WHERE "filters"."article_id" = ?[0m  [["article_id", 8]]
+  ↳ app/views/articles/index.html.erb:16
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/articles/index.html.erb:30
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/articles/index.html.erb:10
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories" INNER JOIN "filters" ON "categories"."id" = "filters"."category_id" WHERE "filters"."article_id" = ?[0m  [["article_id", 9]]
+  ↳ app/views/articles/index.html.erb:16
+  Rendered articles/index.html.erb within layouts/application (42.5ms)
+  Rendered layouts/_lI_navsPart.html.erb (0.3ms)
+  Rendered layouts/_navbar.html.erb (2.0ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 133ms (Views: 125.0ms | ActiveRecord: 4.1ms)
+
+
+  [1m[36mCategory Load (0.4ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" ORDER BY "categories"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" ORDER BY "categories"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mCategory Destroy (128.9ms)[0m  [1m[31mDELETE FROM "categories" WHERE "categories"."id" = ?[0m  [["id", 14]]
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" ORDER BY "categories"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mCategory Destroy (172.1ms)[0m  [1m[31mDELETE FROM "categories" WHERE "categories"."id" = ?[0m  [["id", 13]]
+  [1m[36mFilter Load (0.4ms)[0m  [1m[34mSELECT  "filters".* FROM "filters" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mFilter Load (0.4ms)[0m  [1m[34mSELECT  "filters".* FROM "filters" ORDER BY "filters"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mFilter Destroy (176.0ms)[0m  [1m[31mDELETE FROM "filters" WHERE "filters"."id" = ?[0m  [["id", 3]]
+  [1m[36mFilter Load (0.2ms)[0m  [1m[34mSELECT  "filters".* FROM "filters" ORDER BY "filters"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mFilter Destroy (203.2ms)[0m  [1m[31mDELETE FROM "filters" WHERE "filters"."id" = ?[0m  [["id", 2]]
+  [1m[36mFilter Load (0.2ms)[0m  [1m[34mSELECT  "filters".* FROM "filters" ORDER BY "filters"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mFilter Load (0.2ms)[0m  [1m[34mSELECT  "filters".* FROM "filters" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" ORDER BY "categories"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mCategory Destroy (173.3ms)[0m  [1m[31mDELETE FROM "categories" WHERE "categories"."id" = ?[0m  [["id", 5]]
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" ORDER BY "categories"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mCategory Destroy (78.7ms)[0m  [1m[31mDELETE FROM "categories" WHERE "categories"."id" = ?[0m  [["id", 4]]
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" LIMIT ?[0m  [["LIMIT", 11]]
+Started GET "/articles" for 127.0.0.1 at 2018-07-30 21:31:47 +0300
+Processing by ArticlesController#index as HTML
+  Rendering articles/index.html.erb within layouts/application
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "articles"[0m
+  ↳ app/views/articles/index.html.erb:3
+  [1m[36mArticle Load (0.3ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  ↳ app/views/articles/index.html.erb:7
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/articles/index.html.erb:10
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories" INNER JOIN "filters" ON "categories"."id" = "filters"."category_id" WHERE "filters"."article_id" = ?[0m  [["article_id", 8]]
+  ↳ app/views/articles/index.html.erb:16
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/articles/index.html.erb:30
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/articles/index.html.erb:10
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories" INNER JOIN "filters" ON "categories"."id" = "filters"."category_id" WHERE "filters"."article_id" = ?[0m  [["article_id", 9]]
+  ↳ app/views/articles/index.html.erb:16
+  Rendered articles/index.html.erb within layouts/application (18.7ms)
+  Rendered layouts/_lI_navsPart.html.erb (0.7ms)
+  Rendered layouts/_navbar.html.erb (4.2ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 137ms (Views: 133.2ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/articles/new" for 127.0.0.1 at 2018-07-30 21:31:50 +0300
+Processing by ArticlesController#new as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/bywa/.gem/ruby/2.5.0/gems/sprockets-rails-3.2.1/lib/sprockets/rails/quiet_assets.rb:13
+  Rendering articles/new.html.erb within layouts/application
+  Rendered articles/_form_field.html.erb (5.3ms)
+  Rendered articles/new.html.erb within layouts/application (7.6ms)
+  Rendered layouts/_lI_navsPart.html.erb (0.8ms)
+  Rendered layouts/_navbar.html.erb (4.5ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+Completed 200 OK in 134ms (Views: 128.0ms | ActiveRecord: 0.5ms)
+
+
+Started POST "/articles" for 127.0.0.1 at 2018-07-30 21:32:06 +0300
+Processing by ArticlesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"D8lLWF+ItQjdUouVXGSB/XSBHDKpCYuUNsvRP/hpW2uqjBoQkeBDUJsUxpY2PuDzAlOkQlN2vUjr+po8op/RSA==", "article"=>{"title"=>"Next test", "text"=>"Next", "all_categories"=>"Next test"}, "commit"=>"Create Article"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/bywa/.gem/ruby/2.5.0/gems/sprockets-rails-3.2.1/lib/sprockets/rails/quiet_assets.rb:13
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."category" = ? ORDER BY "categories"."id" ASC LIMIT ?[0m  [["category", "Next test"], ["LIMIT", 1]]
+  ↳ app/models/article.rb:20
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/models/article.rb:20
+  [1m[36mCategory Create (1.6ms)[0m  [1m[32mINSERT INTO "categories" ("category") VALUES (?)[0m  [["category", "Next test"]]
+  ↳ app/models/article.rb:20
+  [1m[35m (0.4ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/models/article.rb:20
+Completed 500 Internal Server Error in 16ms (ActiveRecord: 2.8ms)
+
+
+  
+NameError (undefined local variable or method `user' for #<Category id: nil, category: "Next test">):
+  
+app/models/category.rb:11:in `get_user_id'
+app/models/article.rb:20:in `block in all_categories='
+app/models/article.rb:19:in `map'
+app/models/article.rb:19:in `all_categories='
+app/controllers/articles_controller.rb:17:in `create'
+Started GET "/articles" for 127.0.0.1 at 2018-07-30 21:32:24 +0300
+Processing by ArticlesController#index as HTML
+  Rendering articles/index.html.erb within layouts/application
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "articles"[0m
+  ↳ app/views/articles/index.html.erb:3
+  [1m[36mArticle Load (0.3ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  ↳ app/views/articles/index.html.erb:7
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/articles/index.html.erb:10
+  [1m[36mCategory Load (0.4ms)[0m  [1m[34mSELECT "categories".* FROM "categories" INNER JOIN "filters" ON "categories"."id" = "filters"."category_id" WHERE "filters"."article_id" = ?[0m  [["article_id", 8]]
+  ↳ app/views/articles/index.html.erb:16
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/articles/index.html.erb:30
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/articles/index.html.erb:10
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories" INNER JOIN "filters" ON "categories"."id" = "filters"."category_id" WHERE "filters"."article_id" = ?[0m  [["article_id", 9]]
+  ↳ app/views/articles/index.html.erb:16
+  Rendered articles/index.html.erb within layouts/application (28.9ms)
+  Rendered layouts/_lI_navsPart.html.erb (1.0ms)
+  Rendered layouts/_navbar.html.erb (5.7ms)
+  Rendered layouts/_footer.html.erb (0.5ms)
+Completed 200 OK in 169ms (Views: 162.8ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/articles/new" for 127.0.0.1 at 2018-07-30 21:32:26 +0300
+Processing by ArticlesController#new as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/bywa/.gem/ruby/2.5.0/gems/sprockets-rails-3.2.1/lib/sprockets/rails/quiet_assets.rb:13
+  Rendering articles/new.html.erb within layouts/application
+  Rendered articles/_form_field.html.erb (5.4ms)
+  Rendered articles/new.html.erb within layouts/application (7.5ms)
+  Rendered layouts/_lI_navsPart.html.erb (0.6ms)
+  Rendered layouts/_navbar.html.erb (4.0ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 145ms (Views: 139.8ms | ActiveRecord: 0.5ms)
+
+
+Started POST "/articles" for 127.0.0.1 at 2018-07-30 21:32:48 +0300
+Processing by ArticlesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"DwI5HYuKcYqdp/P5FvJI+DnFUZDRtLnWqhC87Nv1vOGqR2hVReKH0tvhvvp8qCn2Txfp4CvLjwp3IffvgQM2wg==", "article"=>{"title"=>"nextt", "text"=>"next t", "all_categories"=>"tst"}, "commit"=>"Create Article"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/bywa/.gem/ruby/2.5.0/gems/sprockets-rails-3.2.1/lib/sprockets/rails/quiet_assets.rb:13
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."category" = ? ORDER BY "categories"."id" ASC LIMIT ?[0m  [["category", "tst"], ["LIMIT", 1]]
+  ↳ app/models/article.rb:20
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/models/article.rb:20
+  [1m[36mCategory Create (20.2ms)[0m  [1m[32mINSERT INTO "categories" ("category") VALUES (?)[0m  [["category", "tst"]]
+  ↳ app/models/article.rb:20
+  [1m[35m (1.6ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/models/article.rb:20
+Completed 500 Internal Server Error in 35ms (ActiveRecord: 22.6ms)
+
+
+  
+NameError (undefined local variable or method `user' for #<Category id: nil, category: "tst">):
+  
+app/models/category.rb:11:in `get_user_id'
+app/models/article.rb:20:in `block in all_categories='
+app/models/article.rb:19:in `map'
+app/models/article.rb:19:in `all_categories='
+app/controllers/articles_controller.rb:17:in `create'
+Started POST "/articles" for 127.0.0.1 at 2018-07-30 21:34:46 +0300
+Processing by ArticlesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"DwI5HYuKcYqdp/P5FvJI+DnFUZDRtLnWqhC87Nv1vOGqR2hVReKH0tvhvvp8qCn2Txfp4CvLjwp3IffvgQM2wg==", "article"=>{"title"=>"nextt", "text"=>"next t", "all_categories"=>"tst"}, "commit"=>"Create Article"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/bywa/.gem/ruby/2.5.0/gems/sprockets-rails-3.2.1/lib/sprockets/rails/quiet_assets.rb:13
+  [1m[36mCategory Load (0.1ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."category" = ? ORDER BY "categories"."id" ASC LIMIT ?[0m  [["category", "tst"], ["LIMIT", 1]]
+  ↳ app/models/article.rb:20
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/models/article.rb:20
+  [1m[36mCategory Create (0.2ms)[0m  [1m[32mINSERT INTO "categories" ("category") VALUES (?)[0m  [["category", "tst"]]
+  ↳ app/models/article.rb:20
+  [1m[35m (72.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/models/article.rb:20
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/articles_controller.rb:18
+  [1m[36mArticle Create (0.5ms)[0m  [1m[32mINSERT INTO "articles" ("title", "text", "created_at", "updated_at", "user_id") VALUES (?, ?, ?, ?, ?)[0m  [["title", "nextt"], ["text", "next t"], ["created_at", "2018-07-30 18:34:47.012524"], ["updated_at", "2018-07-30 18:34:47.012524"], ["user_id", 1]]
+  ↳ app/controllers/articles_controller.rb:18
+  [1m[36mFilter Create (0.4ms)[0m  [1m[32mINSERT INTO "filters" ("article_id", "category_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["article_id", 26], ["category_id", 15], ["created_at", "2018-07-30 18:34:47.016461"], ["updated_at", "2018-07-30 18:34:47.016461"]]
+  ↳ app/controllers/articles_controller.rb:18
+  [1m[35m (297.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/articles_controller.rb:18
+Redirected to http://localhost:3000/articles/26
+Completed 302 Found in 544ms (ActiveRecord: 374.4ms)
+
+
+Started GET "/articles/26" for 127.0.0.1 at 2018-07-30 21:34:47 +0300
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"26"}
+  [1m[36mArticle Load (0.3ms)[0m  [1m[34mSELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 26], ["LIMIT", 1]]
+  ↳ app/controllers/articles_controller.rb:46
+  Rendering articles/show.html.erb within layouts/application
+  [1m[36mComment Load (0.3ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."article_id" = ?[0m  [["article_id", 26]]
+  ↳ app/views/comments/_comments.html.erb:1
+  Rendered comments/_comments.html.erb (5.5ms)
+  Rendered comments/_form.html.erb (17.1ms)
+  Rendered articles/show.html.erb within layouts/application (47.5ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/_navbar.html.erb:13
+  Rendered layouts/_lI_navsPart.html.erb (0.6ms)
+  Rendered layouts/_navbar.html.erb (4.8ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+Completed 200 OK in 185ms (Views: 170.7ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/articles" for 127.0.0.1 at 2018-07-30 21:34:48 +0300
+Processing by ArticlesController#index as HTML
+  Rendering articles/index.html.erb within layouts/application
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "articles"[0m
+  ↳ app/views/articles/index.html.erb:3
+  [1m[36mArticle Load (0.2ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  ↳ app/views/articles/index.html.erb:7
+  [1m[36mUser Load (1.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/articles/index.html.erb:10
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT "categories".* FROM "categories" INNER JOIN "filters" ON "categories"."id" = "filters"."category_id" WHERE "filters"."article_id" = ?[0m  [["article_id", 8]]
+  ↳ app/views/articles/index.html.erb:16
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/articles/index.html.erb:30
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/articles/index.html.erb:10
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories" INNER JOIN "filters" ON "categories"."id" = "filters"."category_id" WHERE "filters"."article_id" = ?[0m  [["article_id", 9]]
+  ↳ app/views/articles/index.html.erb:16
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/articles/index.html.erb:10
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories" INNER JOIN "filters" ON "categories"."id" = "filters"."category_id" WHERE "filters"."article_id" = ?[0m  [["article_id", 26]]
+  ↳ app/views/articles/index.html.erb:16
+  Rendered articles/index.html.erb within layouts/application (23.6ms)
+  Rendered layouts/_lI_navsPart.html.erb (0.6ms)
+  Rendered layouts/_navbar.html.erb (3.6ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 140ms (Views: 134.8ms | ActiveRecord: 3.4ms)
+
+
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mFilter Load (0.2ms)[0m  [1m[34mSELECT  "filters".* FROM "filters" LIMIT ?[0m  [["LIMIT", 11]]
+Started DELETE "/articles/26" for 127.0.0.1 at 2018-07-30 21:35:13 +0300
+Processing by ArticlesController#destroy as HTML
+  Parameters: {"authenticity_token"=>"PAclVqzwYsd8WkoRX/LhWovG4k6AyvwIIPebMDM04pXAN+dBl4WxgNWx1+r4xYtwbw4h7zUAL0XiEsQ9gg7L3w==", "id"=>"26"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/bywa/.gem/ruby/2.5.0/gems/sprockets-rails-3.2.1/lib/sprockets/rails/quiet_assets.rb:13
+  [1m[36mArticle Load (0.2ms)[0m  [1m[34mSELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 26], ["LIMIT", 1]]
+  ↳ app/controllers/articles_controller.rb:46
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/articles_controller.rb:37
+  [1m[36mComment Load (0.2ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."article_id" = ?[0m  [["article_id", 26]]
+  ↳ app/controllers/articles_controller.rb:37
+  [1m[36mCategory Load (0.1ms)[0m  [1m[34mSELECT "categories".* FROM "categories" INNER JOIN "filters" ON "categories"."id" = "filters"."category_id" WHERE "filters"."article_id" = ?[0m  [["article_id", 26]]
+  ↳ app/controllers/articles_controller.rb:37
+  [1m[36mFilter Load (0.3ms)[0m  [1m[34mSELECT "filters".* FROM "filters" WHERE "filters"."article_id" = ? AND "filters"."category_id" = ?[0m  [["article_id", 26], ["category_id", 15]]
+  ↳ app/controllers/articles_controller.rb:37
+  [1m[36mFilter Destroy (0.7ms)[0m  [1m[31mDELETE FROM "filters" WHERE "filters"."id" = ?[0m  [["id", 6]]
+  ↳ app/controllers/articles_controller.rb:37
+  [1m[36mArticle Destroy (0.4ms)[0m  [1m[31mDELETE FROM "articles" WHERE "articles"."id" = ?[0m  [["id", 26]]
+  ↳ app/controllers/articles_controller.rb:37
+  [1m[35m (1349.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/articles_controller.rb:37
+Redirected to http://localhost:3000/articles
+Completed 302 Found in 1369ms (ActiveRecord: 1352.1ms)
+
+
+Started GET "/articles" for 127.0.0.1 at 2018-07-30 21:35:15 +0300
+Processing by ArticlesController#index as HTML
+  Rendering articles/index.html.erb within layouts/application
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "articles"[0m
+  ↳ app/views/articles/index.html.erb:3
+  [1m[36mArticle Load (0.3ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  ↳ app/views/articles/index.html.erb:7
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/articles/index.html.erb:10
+  [1m[36mCategory Load (0.1ms)[0m  [1m[34mSELECT "categories".* FROM "categories" INNER JOIN "filters" ON "categories"."id" = "filters"."category_id" WHERE "filters"."article_id" = ?[0m  [["article_id", 8]]
+  ↳ app/views/articles/index.html.erb:16
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/articles/index.html.erb:30
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/articles/index.html.erb:10
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories" INNER JOIN "filters" ON "categories"."id" = "filters"."category_id" WHERE "filters"."article_id" = ?[0m  [["article_id", 9]]
+  ↳ app/views/articles/index.html.erb:16
+  Rendered articles/index.html.erb within layouts/application (17.5ms)
+  Rendered layouts/_lI_navsPart.html.erb (0.6ms)
+  Rendered layouts/_navbar.html.erb (3.4ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 136ms (Views: 132.4ms | ActiveRecord: 1.7ms)
+
+
+  [1m[36mFilter Load (0.2ms)[0m  [1m[34mSELECT  "filters".* FROM "filters" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" LIMIT ?[0m  [["LIMIT", 11]]
+Started GET "/categories" for 127.0.0.1 at 2018-07-30 21:35:32 +0300
+Processing by CategoriesController#index as HTML
+  Rendering categories/index.html.erb within layouts/application
+  [1m[36mCategory Load (0.4ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/views/categories/index.html.erb:1
+  Rendered categories/index.html.erb within layouts/application (2.2ms)
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/_navbar.html.erb:13
+  Rendered layouts/_lI_navsPart.html.erb (1.1ms)
+  Rendered layouts/_navbar.html.erb (8.0ms)
+  Rendered layouts/_footer.html.erb (0.5ms)
+Completed 200 OK in 149ms (Views: 138.2ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/articles" for 127.0.0.1 at 2018-07-30 21:35:33 +0300
+Processing by ArticlesController#index as HTML
+  Rendering articles/index.html.erb within layouts/application
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "articles"[0m
+  ↳ app/views/articles/index.html.erb:3
+  [1m[36mArticle Load (0.3ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  ↳ app/views/articles/index.html.erb:7
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/articles/index.html.erb:10
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories" INNER JOIN "filters" ON "categories"."id" = "filters"."category_id" WHERE "filters"."article_id" = ?[0m  [["article_id", 8]]
+  ↳ app/views/articles/index.html.erb:16
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/articles/index.html.erb:30
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/articles/index.html.erb:10
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories" INNER JOIN "filters" ON "categories"."id" = "filters"."category_id" WHERE "filters"."article_id" = ?[0m  [["article_id", 9]]
+  ↳ app/views/articles/index.html.erb:16
+  Rendered articles/index.html.erb within layouts/application (20.4ms)
+  Rendered layouts/_lI_navsPart.html.erb (0.5ms)
+  Rendered layouts/_navbar.html.erb (3.0ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 136ms (Views: 132.1ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/articles/new" for 127.0.0.1 at 2018-07-30 21:35:43 +0300
+Processing by ArticlesController#new as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/bywa/.gem/ruby/2.5.0/gems/sprockets-rails-3.2.1/lib/sprockets/rails/quiet_assets.rb:13
+  Rendering articles/new.html.erb within layouts/application
+  Rendered articles/_form_field.html.erb (4.7ms)
+  Rendered articles/new.html.erb within layouts/application (6.8ms)
+  Rendered layouts/_lI_navsPart.html.erb (1.1ms)
+  Rendered layouts/_navbar.html.erb (7.2ms)
+  Rendered layouts/_footer.html.erb (0.6ms)
+Completed 200 OK in 153ms (Views: 146.6ms | ActiveRecord: 0.5ms)
+
+
+Started POST "/articles" for 127.0.0.1 at 2018-07-30 21:35:55 +0300
+Processing by ArticlesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"iLxBFkpGouWWEanmydM5IlXtHDHIlcf3BKYcWFgNX20t+RBehC5UvdBX5OWjiVgsIz+kQTLq8SvZl1dbAvvVTg==", "article"=>{"title"=>"next tt", "text"=>"next tt", "all_categories"=>"tst2"}, "commit"=>"Create Article"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/bywa/.gem/ruby/2.5.0/gems/sprockets-rails-3.2.1/lib/sprockets/rails/quiet_assets.rb:13
+  [1m[36mCategory Load (0.4ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."category" = ? ORDER BY "categories"."id" ASC LIMIT ?[0m  [["category", "tst2"], ["LIMIT", 1]]
+  ↳ app/models/article.rb:20
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/models/article.rb:20
+  [1m[36mCategory Create (1.5ms)[0m  [1m[32mINSERT INTO "categories" ("category") VALUES (?)[0m  [["category", "tst2"]]
+  ↳ app/models/article.rb:20
+  [1m[35m (115.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/models/article.rb:20
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/articles_controller.rb:18
+  [1m[36mArticle Create (2.3ms)[0m  [1m[32mINSERT INTO "articles" ("title", "text", "created_at", "updated_at", "user_id") VALUES (?, ?, ?, ?, ?)[0m  [["title", "next tt"], ["text", "next tt"], ["created_at", "2018-07-30 18:35:55.186898"], ["updated_at", "2018-07-30 18:35:55.186898"], ["user_id", 1]]
+  ↳ app/controllers/articles_controller.rb:18
+  [1m[36mFilter Create (0.4ms)[0m  [1m[32mINSERT INTO "filters" ("article_id", "category_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["article_id", 27], ["category_id", 16], ["created_at", "2018-07-30 18:35:55.192891"], ["updated_at", "2018-07-30 18:35:55.192891"]]
+  ↳ app/controllers/articles_controller.rb:18
+  [1m[35m (72.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/articles_controller.rb:18
+Redirected to http://localhost:3000/articles/27
+Completed 302 Found in 219ms (ActiveRecord: 192.6ms)
+
+
+Started GET "/articles/27" for 127.0.0.1 at 2018-07-30 21:35:55 +0300
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"27"}
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 27], ["LIMIT", 1]]
+  ↳ app/controllers/articles_controller.rb:46
+  Rendering articles/show.html.erb within layouts/application
+  [1m[36mComment Load (0.1ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."article_id" = ?[0m  [["article_id", 27]]
+  ↳ app/views/comments/_comments.html.erb:1
+  Rendered comments/_comments.html.erb (1.0ms)
+  Rendered comments/_form.html.erb (1.2ms)
+  Rendered articles/show.html.erb within layouts/application (3.3ms)
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/_navbar.html.erb:13
+  Rendered layouts/_lI_navsPart.html.erb (0.8ms)
+  Rendered layouts/_navbar.html.erb (4.8ms)
+  Rendered layouts/_footer.html.erb (0.6ms)
+Completed 200 OK in 79ms (Views: 76.9ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/articles" for 127.0.0.1 at 2018-07-30 21:35:56 +0300
+Processing by ArticlesController#index as HTML
+  Rendering articles/index.html.erb within layouts/application
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "articles"[0m
+  ↳ app/views/articles/index.html.erb:3
+  [1m[36mArticle Load (1.0ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  ↳ app/views/articles/index.html.erb:7
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/articles/index.html.erb:10
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories" INNER JOIN "filters" ON "categories"."id" = "filters"."category_id" WHERE "filters"."article_id" = ?[0m  [["article_id", 8]]
+  ↳ app/views/articles/index.html.erb:16
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/articles/index.html.erb:30
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/articles/index.html.erb:10
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories" INNER JOIN "filters" ON "categories"."id" = "filters"."category_id" WHERE "filters"."article_id" = ?[0m  [["article_id", 9]]
+  ↳ app/views/articles/index.html.erb:16
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/articles/index.html.erb:10
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories" INNER JOIN "filters" ON "categories"."id" = "filters"."category_id" WHERE "filters"."article_id" = ?[0m  [["article_id", 27]]
+  ↳ app/views/articles/index.html.erb:16
+  Rendered articles/index.html.erb within layouts/application (29.5ms)
+  Rendered layouts/_lI_navsPart.html.erb (0.5ms)
+  Rendered layouts/_navbar.html.erb (2.6ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 146ms (Views: 141.3ms | ActiveRecord: 2.6ms)
+
+
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mArticle Load (0.3ms)[0m  [1m[34mSELECT  "articles".* FROM "articles" ORDER BY "articles"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mCategory Load (0.4ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" INNER JOIN "filters" ON "categories"."id" = "filters"."category_id" WHERE "filters"."article_id" = ? LIMIT ?[0m  [["article_id", 27], ["LIMIT", 11]]
+Started DELETE "/articles/27" for 127.0.0.1 at 2018-07-30 21:37:34 +0300
+Processing by ArticlesController#destroy as HTML
+  Parameters: {"authenticity_token"=>"HA2qJp8YEwGDQz6KqS9FdAeP6DeuW8JCrhtk10I6QaAK5R+6Ravjgoz6GWCqaUnXMnFCtvhl9O3G7cUvFgnzIw==", "id"=>"27"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/bywa/.gem/ruby/2.5.0/gems/sprockets-rails-3.2.1/lib/sprockets/rails/quiet_assets.rb:13
+  [1m[36mArticle Load (0.0ms)[0m  [1m[34mSELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 27], ["LIMIT", 1]]
+  ↳ app/controllers/articles_controller.rb:46
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/articles_controller.rb:37
+  [1m[36mComment Load (0.1ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."article_id" = ?[0m  [["article_id", 27]]
+  ↳ app/controllers/articles_controller.rb:37
+  [1m[36mCategory Load (0.1ms)[0m  [1m[34mSELECT "categories".* FROM "categories" INNER JOIN "filters" ON "categories"."id" = "filters"."category_id" WHERE "filters"."article_id" = ?[0m  [["article_id", 27]]
+  ↳ app/controllers/articles_controller.rb:37
+  [1m[36mFilter Load (0.1ms)[0m  [1m[34mSELECT "filters".* FROM "filters" WHERE "filters"."article_id" = ? AND "filters"."category_id" = ?[0m  [["article_id", 27], ["category_id", 16]]
+  ↳ app/controllers/articles_controller.rb:37
+  [1m[36mFilter Destroy (0.5ms)[0m  [1m[31mDELETE FROM "filters" WHERE "filters"."id" = ?[0m  [["id", 7]]
+  ↳ app/controllers/articles_controller.rb:37
+  [1m[36mArticle Destroy (0.1ms)[0m  [1m[31mDELETE FROM "articles" WHERE "articles"."id" = ?[0m  [["id", 27]]
+  ↳ app/controllers/articles_controller.rb:37
+  [1m[35m (247.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/articles_controller.rb:37
+Redirected to http://localhost:3000/articles
+Completed 302 Found in 256ms (ActiveRecord: 248.2ms)
+
+
+Started GET "/articles" for 127.0.0.1 at 2018-07-30 21:37:34 +0300
+Processing by ArticlesController#index as HTML
+  Rendering articles/index.html.erb within layouts/application
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "articles"[0m
+  ↳ app/views/articles/index.html.erb:3
+  [1m[36mArticle Load (0.3ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  ↳ app/views/articles/index.html.erb:7
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/articles/index.html.erb:10
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories" INNER JOIN "filters" ON "categories"."id" = "filters"."category_id" WHERE "filters"."article_id" = ?[0m  [["article_id", 8]]
+  ↳ app/views/articles/index.html.erb:16
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/articles/index.html.erb:30
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/articles/index.html.erb:10
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT "categories".* FROM "categories" INNER JOIN "filters" ON "categories"."id" = "filters"."category_id" WHERE "filters"."article_id" = ?[0m  [["article_id", 9]]
+  ↳ app/views/articles/index.html.erb:16
+  Rendered articles/index.html.erb within layouts/application (22.2ms)
+  Rendered layouts/_lI_navsPart.html.erb (1.0ms)
+  Rendered layouts/_navbar.html.erb (5.7ms)
+  Rendered layouts/_footer.html.erb (0.7ms)
+Completed 200 OK in 225ms (Views: 221.1ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/articles" for 127.0.0.1 at 2018-07-30 21:37:36 +0300
+Processing by ArticlesController#index as HTML
+  Rendering articles/index.html.erb within layouts/application
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "articles"[0m
+  ↳ app/views/articles/index.html.erb:3
+  [1m[36mArticle Load (0.3ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  ↳ app/views/articles/index.html.erb:7
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/articles/index.html.erb:10
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories" INNER JOIN "filters" ON "categories"."id" = "filters"."category_id" WHERE "filters"."article_id" = ?[0m  [["article_id", 8]]
+  ↳ app/views/articles/index.html.erb:16
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/articles/index.html.erb:30
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/articles/index.html.erb:10
+  [1m[36mCategory Load (0.1ms)[0m  [1m[34mSELECT "categories".* FROM "categories" INNER JOIN "filters" ON "categories"."id" = "filters"."category_id" WHERE "filters"."article_id" = ?[0m  [["article_id", 9]]
+  ↳ app/views/articles/index.html.erb:16
+  Rendered articles/index.html.erb within layouts/application (17.8ms)
+  Rendered layouts/_lI_navsPart.html.erb (0.6ms)
+  Rendered layouts/_navbar.html.erb (3.3ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 129ms (Views: 125.8ms | ActiveRecord: 1.6ms)
+
+
