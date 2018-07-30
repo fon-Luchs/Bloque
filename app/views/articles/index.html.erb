@@ -13,6 +13,11 @@
       <h5 class="card-title"><%=	 article.title %></h5>
       <p  class="card-text"> <%=	 truncate(article.text, :length => 350)  %></p>
       <!-- DO REFACTOR -->
+      <%	 article.categories.each do |category| %>
+        <span class="badge badge-pill badge-light">
+          <%=	 category.category %>
+        </span>
+      <%	 end %>
       <div class="d-flex justify-content-center">
         <table>
           <tr>

@@ -1,5 +1,4 @@
 <%=	 form_with model: @article, local: true do |form| %>
-
   <% if @article.errors.any? %>
     <div id="error_explanation">
       <h2>
@@ -13,7 +12,6 @@
       </ul>
     </div>
   <% end %>
-
   <div class="input-container">
     <div class="input-group mb-3">
       <div class="input-group-prepend">
@@ -30,8 +28,12 @@
       </div>
       <%= form.text_area :text, class: "form-control text-area", :cols => 30, style: "width: 65.8rem;" %>
     </div>
-  </div>
 
+    <div class="frotm-group">
+      <%=	 form.label :all_categories %>
+      <%=	 form.text_field :all_categories, class: 'form-control' %>
+    </div>
+  </div>
   <div class="btn-toolbar" role="toolbar" aria-label="Toolbar with button groups">
     <div class="btn-group mr-2" role="group" aria-label="First group">
       <%= form.submit class: "btn btn-primary", type: "submit" %>
@@ -39,8 +41,4 @@
                         class: "btn btn-dark", type: "button" %>
     </div>
   </div>
-
-
-
-
 <%	 end %>

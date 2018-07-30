@@ -10,13 +10,13 @@
     </li>
   <% end %>
 
-  <% if request.path  %> <!-- == categories_path -->
+  <% if request.path == categories_path  %> <!-- == categories_path -->
     <li class="nav-item">
-      <%=	 link_to 'Category', '#', class: "nav-link" %>
+      <%=	 link_to 'Category', categories_path, class: "nav-link  active" %>
     </li>
   <% else %>
     <li class="nav-item">
-      <%= link_to 'Category', '#', class: "nav-link active" %>
+      <%= link_to 'Category', categories_path, class: "nav-link" %>
     </li>
   <% end %>
 </ul>

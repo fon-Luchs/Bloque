@@ -6,7 +6,8 @@ Rails.application.routes.draw do
   root 'welcome#index'
   resources :users
   resources :articles
+  resources :categories
   resources :articles do
-  resources :comments
+    resources :comments
   end
 end

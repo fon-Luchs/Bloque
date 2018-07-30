@@ -1,0 +1,13 @@
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE IF EXISTS "articles"[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (159.9ms)[0m  [1m[35mCREATE TABLE "articles" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar, "text" text, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "user_id" integer, "user_name" varchar)[0m
+  [1m[35m (0.3ms)[0m  [1m[35mDROP TABLE IF EXISTS "categories"[0m
+  [1m[35m (152.8ms)[0m  [1m[35mCREATE TABLE "categories" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "category" varchar)[0m
+  [1m[35m (151.9ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_categories_on_category" ON "categories" ("category")[0m
+  [1m[35m (0.3ms)[0m  [1m[35mDROP TABLE IF EXISTS "comments"[0m
+  [1m[35m (482.3ms)[0m  [1m[35mCREATE TABLE "comments" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "commenter" varchar, "body" text, "article_id" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "user_id" integer)[0m
+  [1m[35m (353.0ms)[0m  [1m[35mCREATE  INDEX "index_comments_on_article_id" ON "comments" ("article_id")[0m
+  [1m[35m (0.3ms)[0m  [1m[35mDROP TABLE IF EXISTS "filters"[0m
+  [1m[35m (669.4ms)[0m  [1m[35mCREATE TABLE "filters" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "article_id" integer, "category_id" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[35m (701.9ms)[0m  [1m[35mCREATE  INDEX "index_filters_on_article_id" ON "filters" ("article_id")[0m
+  [1m[35m (690.9ms)[0m  [1m[35mCREATE  INDEX "index_filters_on_category_id" ON "filters" ("category_id")[0m

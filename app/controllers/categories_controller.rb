@@ -1,10 +1,34 @@
 class CategoriesController < ApplicationController
 
-  def create
-    @article  = Article.find(params[:article_id])
-    @category = Category.create(category_params)
+  def index
+    @categories = Category.all
+  end
 
-      ## if !!
+  def new
+    @category = Category.new
+  end
+
+  #############################################
+  def create
+    @category = Category.new(category_params)
+
+    if @category.save
+      puts"!!OK!!"
+      redirect_to articles_new_path
+    else
+      raise"CTG_ERRNO"
+      flash.now[:danger] = "error"
+    end
+  end
+  #############################################
+
+  def show
+    @category = Category.find_by(name: params[:id])
+    @article  = @category.articles
+  end
+
+  def destroy
+    @category = Category.find(params[:id])
   end
 
   private
