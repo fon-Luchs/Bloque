@@ -1,0 +1,7 @@
+<%=	 @category.category %>
+
+<%   if @category.articles.empty? %>
+  <%=	 render 'layouts/no_content' %>
+<%	 else %>
+  <%=	 render @category.articles %>
+<%	 end %>

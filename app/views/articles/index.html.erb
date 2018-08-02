@@ -2,59 +2,7 @@
 
 <%	 if @articles.count.zero? %>
   <%=	 render 'layouts/no_content' %>
+<%	 else %>
+  <%=	 render @articles %>
 <%	 end %>
 
-<%	 @articles.each do |article| %>
-  <section class="card" style="width: 69.4rem;">
-    <div class="card-top">
-      <%= article.user.user_name %>
-    </div>
-    <div class="card-body">
-      <h5 class="card-title"><%=	 article.title %></h5>
-      <p  class="card-text"> <%=	 truncate(article.text, :length => 350)  %></p>
-      <!-- DO REFACTOR -->
-      <%	 article.categories.each do |category| %>
-        <span class="badge badge-pill badge-light">
-          <%=	 category.category %>
-        </span>
-      <%	 end %>
-      <div class="d-flex justify-content-center">
-        <table>
-          <tr>
-            <td>
-              <%=	 button_to 'show', article_path(article),
-                                :method => :get, type: "button",
-                                class: "btn btn-outline-info"
-              %>
-            </td>
-            <%	 if article.user == current_user %>
-            <td>
-              <%=	 button_to 'edit', edit_article_path(article),
-                              :method => :get, type: "button",
-                              class: "btn btn-outline-primary"
-              %>
-            </td>
-            <td>
-              <%=
-                button_to 'delete', article_path(article), :method => :delete,
-                          data: {
-                              confirm: "Confirm the operation", title: "Delete " + article.title + "?",
-                              commit: "Delete"
-                          },
-                          type: "button", class: "btn btn-outline-danger"
-              %>
-            </td>
-            <%  end %>
-          </tr>
-        </table>
-      </div>
-      <!-- DO REFACTOR -->
-    </div>
-  </section>
-<%	 end %>
-
-<%#	 if user_signed_in? %>
-<!--  <div class="d-flex justify-content-center">-->
-    <%#=	 link_to 'new',  new_article_path, class: "btn btn-primary btn-lg btn-block" %>
-<!--  </div>-->
-<%#	 end %>

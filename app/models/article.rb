@@ -12,7 +12,7 @@ class Article < ApplicationRecord
   after_save :get_username
 
   def all_categories
-    self.categories.map(&:categories).join(', ')
+    self.categories.map(&:category).join(', ')
   end
 
   def all_categories=(categories)

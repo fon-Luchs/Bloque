@@ -1,0 +1,49 @@
+
+  <section class="card" style="width: 69.4rem;">
+    <div class="card-top">
+      <span class="badge badge-pill badge-dark">
+        <%= article.user.user_name %>
+      </span>
+    </div>
+    <div class="card-body">
+      <h5 class="card-title"><%= article.title %></h5>
+      <p class="card-text"> <%= truncate(article.text, :length => 350) %></p>
+      <!-- DO REFACTOR -->
+      <span class="badge badge-pill badge-light">
+          <%= raw article.categories.map(&:category).map {
+              |t| link_to t, category_path(t)
+          }.join(' ') %>
+        </span>
+      <div class="d-flex justify-content-center">
+        <table>
+          <tr>
+            <td>
+              <%= button_to 'show', article_path(article),
+                            :method => :get, type: "button",
+                            class: "btn btn-outline-info"
+              %>
+            </td>
+            <% if article.user == current_user %>
+              <td>
+                <%= button_to 'edit', edit_article_path(article),
+                              :method => :get, type: "button",
+                              class: "btn btn-outline-primary"
+                %>
+              </td>
+              <td>
+                <%=
+                  button_to 'delete', article_path(article), :method => :delete,
+                            data: {
+                                confirm: "Confirm the operation", title: "Delete " + article.title + "?",
+                                commit: "Delete"
+                            },
+                            type: "button", class: "btn btn-outline-danger"
+                %>
+              </td>
+            <% end %>
+          </tr>
+        </table>
+      </div>
+      <!-- DO REFACTOR -->
+    </div>
+  </section>

@@ -5,7 +5,7 @@ class Comment < ApplicationRecord
 
   after_save :get_user_name
   after_save :get_user_id
-  
+
   private
 
   def get_user_id
