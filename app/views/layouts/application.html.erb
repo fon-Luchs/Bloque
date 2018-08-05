@@ -11,8 +11,17 @@
   <%=	 render 'layouts/navbar' %>
   <main class="content">
     <div class="container">
-      <p class="notice"><%= notice %></p>
+      <p class="notice"><%= notice %></p> <!--???-->
       <p class="alert"><%= alert %></p>
+      <div class="row">
+        <div class="col-md-12">
+          <%	 flash.each do |name, msg| %>
+            <div class="alert alert-<%=  name %>">
+              <%=	 msg %>
+            </div>
+          <%	 end %>
+        </div>
+      </div>
       <%= yield %>
     </div>
   </main>

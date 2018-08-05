@@ -16,9 +16,9 @@ class ArticlesController < ApplicationController
 
     @article = current_user.articles.build(article_params)
     if @article.save
-      redirect_to @article
+      redirect_to @article, success: "Success created"
     else
-      render 'new'
+      render :new, danger: "Article is not created"
     end
   end
 
@@ -27,16 +27,16 @@ class ArticlesController < ApplicationController
 
   def update
     if @article.update(article_params)
-      redirect_to @article
+      redirect_to @article, info: "Success updated"
     else
-      render 'edit'
+      render 'edit', danger: "Article is not updated"
     end
   end
 
   def destroy
     @article.destroy
 
-    redirect_to articles_path
+    redirect_to articles_path, success: "Success deleted"
   end
 
 

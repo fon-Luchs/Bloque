@@ -1,7 +1,7 @@
 <%=	 form_with model: @article, local: true do |form| %>
 
   <% if @article.errors.any? %>
-    <div id="error_explanation">
+    <div class="alert alert-danger">
       <h2>
         <%= pluralize(@article.errors.count, "error") %> prohibited
         this article from being saved:

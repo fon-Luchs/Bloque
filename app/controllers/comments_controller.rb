@@ -7,7 +7,7 @@ class CommentsController < ApplicationController
     if @comment.save
       redirect_to article_path(@article)
     else
-      flash.now[:danger] = "error"
+      flash.now[:danger] = "Comment in not created"
     end
   end
 
