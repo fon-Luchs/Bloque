@@ -7,7 +7,7 @@
   </div>
   <div class="card-body">
     <h5 class="card-title"><%= article.title %></h5>
-    <p class="card-text"> <%= truncate(article.text, :length => 350) %></p>
+    <p class="card-text"> <%= article.text.first(150).html_safe %></p>
     <span class="badge badge-pill badge-light">
         <%= raw article.categories.map(&:category).map {
             |t| link_to t, category_path(t)

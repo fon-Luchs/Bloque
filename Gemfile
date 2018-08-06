@@ -18,6 +18,9 @@ gem 'jquery-rails'
 gem 'data-confirm-modal'
 gem 'simple_form'
 gem 'devise'
+gem 'trix-rails', require: 'trix'
+gem 'nokogiri'
+gem 'htmlentities'
 
 group :development, :test do
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
@@ -37,4 +40,4 @@ group :test do
   gem 'chromedriver-helper'
 end
 
-gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
+gem 'tzinfo-data'

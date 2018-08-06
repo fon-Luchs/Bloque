@@ -23,11 +23,7 @@
     </div>
 
     <div class="input-group">
-      <div class="input-group-prepend">
-        <span class="input-group-text">Text</span>
-
-      </div>
-      <%= form.text_area :text, class: "form-control text-area", :cols => 30, style: "width: 65.8rem;" %>
+      <%= form.trix_editor :text, required: true, autofocus: true, class: "editor" %>
     </div>
 
     <div class="frotm-group">

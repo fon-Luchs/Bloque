@@ -3,11 +3,14 @@ class CommentsController < ApplicationController
 
   def create
     @comment = @article.comments.create(comment_params)
-
+    # ========================================= #
+    @comment.user_id = current_user.id          # ADD TO MODEL
+    @comment.commenter = current_user.user_name #
+    # ========================================= #
     if @comment.save
       redirect_to article_path(@article)
     else
-      flash.now[:danger] = "Comment in not created"
+      flash.now[:danger] = "Comment is not created"
     end
   end
 
