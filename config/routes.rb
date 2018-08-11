@@ -5,6 +5,6 @@ Rails.application.routes.draw do
   resources :articles
   resources :categories, only: [:index, :show, :destroy]
   resources :articles do
-    resources :comments
+    resources :comments, only: [:create, :destroy]
   end
 end

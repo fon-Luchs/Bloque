@@ -1,18 +1,18 @@
 class Article < ApplicationRecord
-  attr_accessor :article_categories_arr
   has_many :comments, dependent: :destroy, inverse_of: :article
   belongs_to :user
   has_many :filters
-  has_many :categories,dependent: :destroy, through: :filters
+  has_many :categories, dependent: :destroy, through: :filters
 
   validates_associated :comments
+  validates_associated :categories
   validates :title, presence: true, length: { minimum: 5 }
   validates :text, presence: true
 
   after_save :get_username
 
   def all_categories
-    self.categories.map(&:category).join(', ')
+    categories.map(&:category).join(', ')
   end
 
   def all_categories=(categories)
